@@ -10,5 +10,5 @@
 
 ## 🚀 Hotel Gatsby
 
-- Proyecto Hotel Gatsby en el curso de React
 - Utilizando las tecnologias de Gatsby, GraphQL y DatoCMS
+- [App](https://agitated-hawking-b93c5f.netlify.app/).
