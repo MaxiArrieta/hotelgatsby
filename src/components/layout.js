@@ -3,9 +3,14 @@ import { Global, css } from "@emotion/core"
 import Helmet from "react-helmet"
 import Header from "./header"
 import Footer from "./footer"
+import useSeo from "../hook/use-seo"
 
 const Layout = props => {
   // <> </> Forma que tiene gatsby para utilizar Fragment
+  const seo = useSeo()
+  const {
+    fallbackSeo: { description, title },
+  } = seo
   return (
     <>
       <Global
@@ -47,7 +52,8 @@ const Layout = props => {
         `}
       />
       <Helmet>
-        <title>Gatsby Hotel</title>
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
           rel="stylesheet"
@@ -59,7 +65,7 @@ const Layout = props => {
       </Helmet>
       <Header />
       {props.children}
-      <Footer />
+      <Footer title={title} />
     </>
   )
 }

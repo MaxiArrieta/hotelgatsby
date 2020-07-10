@@ -26,10 +26,9 @@ const IndexPage = () => {
       <ContenidoInicio />
       <h2
         css={css`
-        text-align: center;
-        margin-top: 5rem
-        font.size: 3rem;
-
+          text-align: center;
+          margin-top: 5rem;
+          font.size: 3rem;
         `}
       >
         Nuestras Habitaciones
