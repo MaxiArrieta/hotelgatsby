@@ -2,6 +2,7 @@ import React from "react"
 import { Global, css } from "@emotion/core"
 import Helmet from "react-helmet"
 import Header from "./header"
+import Footer from "./footer"
 
 const Layout = props => {
   // <> </> Forma que tiene gatsby para utilizar Fragment
@@ -58,6 +59,7 @@ const Layout = props => {
       </Helmet>
       <Header />
       {props.children}
+      <Footer />
     </>
   )
 }
