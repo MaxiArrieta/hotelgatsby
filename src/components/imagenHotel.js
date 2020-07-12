@@ -22,6 +22,7 @@ const TextoImagen = styled.div`
   h1 {
     font-size: 4rem;
     margin: 0%;
+    text-align: center;
     @media (min-width: 992px) {
       font-size: 5.8rem;
     }

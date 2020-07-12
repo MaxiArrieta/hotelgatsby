@@ -15,6 +15,11 @@ const Boton = styled(Link)`
   text-transform: uppercase;
   font-weight: 700;
   text-align: center;
+
+  &:hover {
+    background: #318aac;
+    color: #fff !important;
+  }
 `
 
 const HabitacionPreview = ({ habitacion }) => {
@@ -22,7 +27,8 @@ const HabitacionPreview = ({ habitacion }) => {
   return (
     <div
       css={css`
-        border: 1px solid #e1e1e1;
+        box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3),
+          0px 2px 12px rgba(0, 0, 0, 0.25);
         margin-bottom: 2rem;
       `}
     >
