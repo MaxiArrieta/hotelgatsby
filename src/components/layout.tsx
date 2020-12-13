@@ -11,6 +11,7 @@ const Layout = props => {
   const {
     fallbackSeo: { description, title },
   } = seo
+  
   return (
     <>
       <Global

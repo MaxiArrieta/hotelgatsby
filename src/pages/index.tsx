@@ -6,6 +6,8 @@ import useHabitaciones from "../hook/use-habitaciones"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import HabitacionPreview from "../components/habitacionPreview"
+import { Habitacion } from '../hook/use-habitaciones';
+
 
 const ListadoHabitaciones = styled.ul`
   max-width: 1200px;
@@ -35,7 +37,7 @@ const IndexPage = () => {
         Nuestras Habitaciones
       </h2>
       <ListadoHabitaciones>
-        {habitaciones.map(habitacion => (
+        {habitaciones.map((habitacion: Habitacion) => (
           <HabitacionPreview key={habitacion.id} habitacion={habitacion} />
         ))}
       </ListadoHabitaciones>

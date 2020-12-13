@@ -1,5 +1,5 @@
-exports.createPages = async ({ actions, graphql, reporter }) => {
-  const resultado = await graphql(`
+exports.createPages = async({ actions, graphql, reporter }) => {
+    const resultado = await graphql(`
     query {
       allDatoCmsHabitacion {
         nodes {
@@ -8,21 +8,21 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       }
     }
   `)
-  //  console.log(resultado.data.allDatoCmsHabitacion.nodes)
-  if (resultado.errors) {
-    reporter.panic("No hubo resultados ", resultado.errors)
-  }
+        //  console.log(resultado.data.allDatoCmsHabitacion.nodes)
+    if (resultado.errors) {
+        reporter.panic("No hubo resultados ", resultado.errors)
+    }
 
-  //Si hay paginas, crear los archivos
-  const habitaciones = resultado.data.allDatoCmsHabitacion.nodes
+    //Si hay paginas, crear los archivos
+    const habitaciones = resultado.data.allDatoCmsHabitacion.nodes
 
-  habitaciones.forEach(habitacion => {
-    actions.createPage({
-      path: habitacion.slug,
-      component: require.resolve("./src/components/habitaciones.js"),
-      context: {
-        slug: habitacion.slug,
-      },
+    habitaciones.forEach(habitacion => {
+        actions.createPage({
+            path: habitacion.slug,
+            component: require.resolve("./src/components/habitaciones.tsx"),
+            context: {
+                slug: habitacion.slug,
+            },
+        })
     })
-  })
 }
