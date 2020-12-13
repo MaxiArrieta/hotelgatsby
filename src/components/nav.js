@@ -6,7 +6,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: center;
   padding-bottom: 3rem;
-  @media (min-width 768px) {
+  @media (min-width: 768px) {
     padding-bottom: 0;
   }
 `
@@ -27,12 +27,14 @@ const NavLink = styled(Link)`
     border-bottom: 2px solid #fff;
   }
   &:hover {
-  box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
-  outline-color: rgba(49, 138, 172, 0);
-  outline-offset: 80px;
-  text-shadow: 1px 1px 6px #fff;
-  border-shadow: 
+    box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5),
+      0 0 20px rgba(49, 138, 172, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    text-shadow: 1px 1px 6px #fff;
+  }
 `
+
 const Navegacion = () => {
   return (
     <Nav>

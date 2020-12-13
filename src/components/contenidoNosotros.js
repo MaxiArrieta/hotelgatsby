@@ -6,7 +6,7 @@ import { css } from "@emotion/core"
 
 const Contenido = styled.main`
   padding-top: 4rem;
-  maxi-width: 1200px;
+  max-width: 1200px;
   width: 95%;
   margin: 0 auto;
 
@@ -51,8 +51,7 @@ const ContenidoNosotros = () => {
         {titulo}
       </h2>
       <Contenido>
-        <p>{contenido}</p>
-        <Image fluid={imagen.fluid} />
+        <p> {contenido} </p> <Image fluid={imagen.fluid} />
       </Contenido>
     </>
   )

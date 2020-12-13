@@ -15,7 +15,8 @@ const ListadoHabitaciones = styled.ul`
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 3rem
+    column-gap: 3rem;
+  }
 `
 
 const IndexPage = () => {
@@ -28,7 +29,7 @@ const IndexPage = () => {
         css={css`
           text-align: center;
           margin-top: 5rem;
-          font.size: 3rem;
+          font-size: 3rem;
         `}
       >
         Nuestras Habitaciones

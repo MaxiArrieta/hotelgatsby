@@ -6,7 +6,7 @@ import { css } from "@emotion/core"
 
 const TextoInicio = styled.div`
   padding-top: 4rem;
-  maxi-width: 1200px;
+  max-width: 1200px;
   width: 95%;
   margin: 0 auto;
 
@@ -50,8 +50,7 @@ const ContenidoInicio = () => {
         {titulo}
       </h2>
       <TextoInicio>
-        <p>{contenido}</p>
-        <Image fluid={imagen.fluid} />
+        <p> {contenido} </p> <Image fluid={imagen.fluid} />
       </TextoInicio>
     </>
   )

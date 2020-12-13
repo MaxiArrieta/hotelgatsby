@@ -49,7 +49,8 @@ const Footer = ({ title }) => {
           padding: 1rem;
         `}
       >
-        {title}, Todos los derechos Reservados {year} &copy;
+        {title}, Todos los derechos Reservados {year} &copy; - Maximiliano
+        Arrieta
       </p>
     </>
   )
